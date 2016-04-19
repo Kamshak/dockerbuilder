@@ -22,7 +22,7 @@ def log_output(stream, decode):
         if decode:
             stream_chunk = chunk.get('stream')
             if stream_chunk:
-                print(stream_chunk.replace('\n', ''))
+                print(stream_chunk.encode('utf-8').replace('\n', ''))
         else:
             print(chunk.decode('utf-8'))
 
